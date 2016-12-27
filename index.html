@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TODO MVC App</title>
+  <meta name="description" content="JS MVC via N13 lib">
+  <meta name="author" content="Alyonka Shevchenko">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/libs/jquery-3.1.1.min.js"></script>
+  <script src="js/libs/n13.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <div class="todos"><h1 id="todos-header">My todos</h1>
+          <div class="row todos-new">
+            <div id="div-new-todo" class="col-xs-8 col-sm-8 col-md-8">
+              <div class="form-group">
+                <input id="new-todo" class="form-control" type="text" placeholder="Add todo">
+              </div>
+            </div>
+            <div id="div-add-todo" class="col-xs-4 col-sm-4 col-md-4">
+              <button id="add-todo" class="btn btn-success form-control" type="button">Add todo</button>
+            </div>
+          </div>
+          <ul class="todos-list list-unstyled"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    N13.init({appRoot: ['App', 'js']});
+    N13.create('App.Todo');
+  </script>
+</body>
+</html>
