@@ -13,7 +13,7 @@ N13.define('App.mixins.Observer', {
        }
     },
     _off: function(el, action, callback) {
-        $(el).on(action, callback);
+        $(el).off(action, callback);
     },
     fire: function(userAction, parameter){
         $(this).trigger(userAction, parameter);
